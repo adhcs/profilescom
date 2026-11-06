@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     restart: unless-stopped
     ports:
-      - "8080:8080"
+      - "8081:8080"
     environment:
       APP_LOGIN_EMAIL: ""
       APP_LOGIN_PASSWORD: ""
