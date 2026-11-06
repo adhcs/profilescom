@@ -1,0 +1,27 @@
+services:
+  ohip:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      APP_LOGIN_EMAIL: ""
+      APP_LOGIN_PASSWORD: ""
+      ENV_ONLY: "1"
+      LOG_STDOUT: "1"
+      NO_FILE_WRITES: "1"
+      OHIP_BASE_URL: ""
+      OHIP_TOKEN_PATH: "/oauth/v1/tokens"
+      OHIP_CLIENT_ID: ""
+      OHIP_CLIENT_SECRET: ""
+      OHIP_APP_KEY: ""
+      OHIP_HOTEL_ID: ""
+      OHIP_ENTERPRISE_HEADER: "enterpriseId"
+      OHIP_ENTERPRISE_ID: ""
+      OHIP_SCOPE: ""
+      OHIP_PROFILE_GET_PATH: "/crm/v1/profiles/{profileId}?hotelId={hotelId}"
+      OHIP_PROFILE_ID_TYPE: "Profile"
+      DEBUG: "0"
+      TZ: "UTC"
